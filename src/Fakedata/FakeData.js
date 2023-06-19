@@ -1,19 +1,19 @@
 export const List = [
     { id:1,
-        Name :'rami jawadi',
-        activity: 'developpeur'
+        Name :'Docteur a domicile',
+        activity: 'votre docteru a domicile'
 
 
       },
       { id:2,
-        Name :'salah',
-        activity: 'footballeur'
+        Name :'clinique pour vous',
+        activity: 'un clinique pour vous'
 
 
       },
       { id:3,
-        Name :'wahid wahid',
-        activity: 'developpeur'
+        Name :'Docteur',
+        activity: 'Docteur a hopitale'
 
       },
       { id:4,
@@ -21,17 +21,17 @@ export const List = [
         activity: 'medecin'
       },
       { id:5,
-        Name :'rami jawadi',
-        activity: 'developpeur'
+        Name :'medecine generale',
+        activity: 'medecin'
 
       },
       { id:6,
-        Name :'rami jawadi',
+        Name :'docteur',
         activity: 'medecin'
 
       }, { id:7,
-        Name :'rami jawadi',
-        activity: 'developpeur'
+        Name :'infermier',
+        activity: 'a domicile '
 
       }
 

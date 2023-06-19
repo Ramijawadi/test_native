@@ -11,9 +11,9 @@ const ButtomTabs = () => {
   return (
     <Tab.Navigator
       initialRouteName="tabs_home"
-      activeColor="blue"
-      inactiveColor="blue"
-      barStyle={{ backgroundColor: '#4A919E' }}
+      activeColor="#094C69"
+      inactiveColor="#0D6990"
+      barStyle={{ backgroundColor: '#62C2EB' }}
     
       >
       <Tab.Screen
@@ -22,7 +22,7 @@ const ButtomTabs = () => {
         options={{
           tabBarLabel: 'Dashboard',
           tabBarIcon: ({color, size}) => (
-            <MaterialCommunityIcons name="home" color={color} size={30} />
+            <MaterialCommunityIcons name="home" color={color} size={20} />
           ),
         }}
       />
@@ -32,7 +32,7 @@ const ButtomTabs = () => {
         options={{
           tabBarLabel: 'Messages',
           tabBarIcon: ({color, size}) => (
-            <MaterialCommunityIcons name="chat" color={color} size={30} />
+            <MaterialCommunityIcons name="chat" color={color} size={20} />
           ),
           tabBarBadge: 2,
         }}
@@ -46,7 +46,7 @@ const ButtomTabs = () => {
             <MaterialCommunityIcons
               name="account-cog"
               color={color}
-              size={30}
+              size={20}
             />
           ),
         }}
