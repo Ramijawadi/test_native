@@ -1,7 +1,7 @@
 
 import {StyleSheet} from 'react-native'
 
- const styles =  StyleSheet.create({
+ export const styles =  StyleSheet.create({
 
     scrollableItem :{
         flexDirection:"column",
@@ -26,4 +26,3 @@ import {StyleSheet} from 'react-native'
 
 }) 
 
-export default styles

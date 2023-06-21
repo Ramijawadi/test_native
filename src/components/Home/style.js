@@ -12,13 +12,18 @@ export const dashboardStyle = StyleSheet.create({
   },
 
   userImage: {
-    width: 110,
-    height: 100,
+    width: 130,
+    height: 110,
     borderRadius: 50 / 2,
+   
+  
   },
 
   userName: {
-    fontSize: 25,
+    fontSize: 40,
+    fontWeight:'bold',
+    marginRight:200,
+    color:'#62C2EB'
   },
 
   /*style flat list*/

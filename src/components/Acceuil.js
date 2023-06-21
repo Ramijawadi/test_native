@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-const Acceuil = () => {
+export const Acceuil = () => {
   return (
     <View>
       <Text>Hello from react native</Text>
@@ -9,4 +9,3 @@ const Acceuil = () => {
   )
 }
 
-export default Acceuil

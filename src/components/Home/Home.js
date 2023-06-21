@@ -8,36 +8,38 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import React from 'react';
-import {dashboardStyle} from './style';
+import { dashboardStyle } from './style';
 import {List} from '../../Fakedata/FakeData';
 
 import ActivityItem from '../ActivityItem';
 import SymptomItem from '../Symptomes';
 import {Symptomes} from '../../Fakedata/FakeSymtome';
-import { Docteurs } from '../../Fakedata/FakeDocteur';
+import {Docteurs} from '../../Fakedata/FakeDocteur';
 
-var styles = StyleSheet.create({
-  image: {
-    width: 200,
-    height: 220,
-  },
-});
+// const styles = StyleSheet.create({
+//   image: {
+//     width: 200,
+//     height: 220,
+//   },
+// });
 
-const HomeScreen = () => {
+const Home = () => {
   return (
     <ScrollView>
       <View style={dashboardStyle.header}>
-        <Text style={dashboardStyle.userName}> Mark zukerberg </Text>
         <Image
           size={2}
-          source={require('../../Assets/mark.jpg')}
+          source={{
+            uri: 'https://static.vecteezy.com/ti/vecteur-libre/p3/5377647-logo-soins-medicaux-logo-clinique-vectoriel.jpg',
+          }}
           style={dashboardStyle.userImage}
         />
+        <Text style={dashboardStyle.userName}>CliniQue </Text>
       </View>
 
       {/* list des activitèe*/}
 
-      <FlatList
+        <FlatList
         data={List}
         keyExtractor={item => item.id}
         horizontal={true}
@@ -46,7 +48,7 @@ const HomeScreen = () => {
         renderItem={({item}) => {
           return <ActivityItem item={item} />;
         }}
-      />
+      /> 
       {/* fin des activitèe*/}
 
       {/* list symptomes */}
@@ -77,46 +79,35 @@ const HomeScreen = () => {
         <Text style={dashboardStyle.titleBold}>Nos docteurs</Text>
 
         <TouchableOpacity>
-
-
-
           <Text style={dashboardStyle.link}> Afficher tous </Text>
         </TouchableOpacity>
       </View>
 
+      <View style={dashboardStyle.doctorsContainer}>
+        {Docteurs.map((doctor, index) => {
+          return (
+            <TouchableOpacity key={doctor.id} style={dashboardStyle.doctorCard}>
+              <Image
+                source={{uri: `${doctor.img}`}}
+                style={dashboardStyle.doctorImg}
+              />
 
-<View style={dashboardStyle.doctorsContainer}> 
-
-{Docteurs.splice(0, 3).map((doctor, index)=> {
-
-return(
-<TouchableOpacity  key={doctor.id} style={dashboardStyle.doctorCard} >
-<Image source={{uri: `${doctor.img}`}} style={dashboardStyle.doctorImg} />
-
-<View style={dashboardStyle.doctorInfo}>
-<Text style={dashboardStyle.doctorName} >{doctor.fullname}</Text>  
-<Text style={dashboardStyle.doctorSpec}>{doctor.speciality}</Text>   
-</View>
-
-
-
-</TouchableOpacity>
-
-)
-
-})
-
-
-}
-
-
-</View>
+              <View style={dashboardStyle.doctorInfo}>
+                <Text style={dashboardStyle.doctorName}>{doctor.fullname}</Text>
+                <Text style={dashboardStyle.doctorSpec}>
+                  {doctor.speciality}
+                </Text>
+              </View>
+            </TouchableOpacity>
+          );
+        })}
+      </View>
       {/* fin liste des docteurs */}
     </ScrollView>
   );
 };
 
-export default HomeScreen;
+export default Home;
 
 // import React from 'react';
 // import {View, Text, Image, ScrollView, TextInput} from 'react-native';
